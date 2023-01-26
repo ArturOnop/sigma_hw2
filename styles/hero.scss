@@ -1,0 +1,330 @@
+.hero {
+
+    .decor-hero {
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        z-index: -1;
+
+        .ellipse {
+            position: absolute;
+            height: 496px;
+            width: 496px;
+            opacity: 0.3;
+            filter: blur(75px);
+            background: #D5AEE4;
+            left: -480px;
+            top: -100px;
+        }
+
+        .decor {
+            position: absolute;
+            right: 0;
+
+            img {
+                width: 720px;
+                height: 700px;
+            }
+        }
+    }
+
+    .nav-hero {
+        display: flex;
+        align-items: center;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        margin-top: 45px;
+        height: 40px;
+        justify-content: space-between;
+        font-family: 'Google Sans', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        color: #212832;
+
+        a:hover div {
+            transform: scale(1.2);
+            color: #DF6951;
+        }
+
+        .nav-hero__logo {
+            width: 114px;
+            height: 33px;
+        }
+
+        .nav-hero__nav-items {
+            display: flex;
+            margin-left: 12vw;
+            gap: 4vw;
+        }
+
+        .nav-hero__buttons {
+            margin-left: 50px;
+            display: flex;
+            align-items: center;
+            width: 180px;
+            justify-content: space-between;
+
+            .nav-hero__sign-up {
+                border: 1px solid #212832;
+                border-radius: 5px;
+                padding: 8px 15px;
+            }
+        }
+
+        .nav-hero__dropdown {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            cursor: pointer;
+
+            img {
+                width: 9px;
+            }
+        }
+    }
+
+    .content-hero {
+        display: flex;
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+        .content-hero__content {
+            margin-top: 130px;
+            width: 50%;
+
+            .content-hero__tagline {
+                width: 410px;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                text-transform: uppercase;
+                color: #DF6951;
+            }
+
+            .content-hero__title {
+                width: 545px;
+                margin-top: 24px;
+                font-family: 'Volkhov', sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 84px;
+                line-height: 89px;
+                letter-spacing: -0.04em;
+                color: #181E4B;
+            }
+
+            .content-hero__desc {
+                margin-top: 30px;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 30px;
+                color: #5E6282;
+                width: 477px;
+            }
+
+            .content-hero__buttons {
+                margin-top: 34px;
+                width: 379px;
+                display: flex;
+                justify-content: space-between;
+
+                .content-hero__more {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Google Sans', sans-serif;
+                    font-weight: 500;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    width: 170px;
+                    height: 60px;
+                    background: #F1A501;
+                    box-shadow: 0 20px 35px rgba(241, 165, 1, 0.15);
+                    border-radius: 10px;
+                }
+
+                .content-hero__demo {
+
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .content-hero__play {
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 50%;
+                        background: #DF6951;
+                        box-shadow: 0 15px 30px rgba(223, 105, 81, 0.3);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 15px;
+                        }
+
+                    }
+
+                    div {
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 17px;
+                        color: #686D77;
+                    }
+                }
+
+                a:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .content-hero__images {
+            margin-top: 40px;
+            width: 50%;
+            position: relative;
+
+            .traveller {
+                position: absolute;
+                left: -120px;
+                width: 760px;
+                height: 760px;
+            }
+
+            .left-plane {
+                position: absolute;
+                top: 100px;
+                width: 137px;
+                height: 95px;
+            }
+
+            .left-plane:hover {
+                animation-name: fly;
+                animation-duration: 3s;
+            }
+
+            @keyframes fly {
+                from {
+                    transform: translate(0, 0);
+                }
+                to {
+                    transform: translate(50vw, -200px);
+                }
+            }
+
+            .right-plane {
+                position: absolute;
+                top: 140px;
+                left: 510px;
+                width: 137px;
+                height: 95px;
+                z-index: -1;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .hero .nav-hero .nav-hero__nav-items {
+        margin-left: 5vw;
+    }
+
+    .hero .nav-hero .nav-hero__buttons {
+        margin-left: 30px;
+    }
+
+    .hero .content-hero .content-hero__images .right-plane {
+        display: none;
+    }
+
+    .hero .content-hero .content-hero__images .left-plane {
+        left: 50px;
+    }
+
+    .hero .content-hero .content-hero__images .traveller {
+        margin-top: 100px;
+        width: 500px;
+        height: 500px;
+        left: 0
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero .content-hero .content-hero__images .traveller {
+        display: none;
+    }
+
+    .hero .content-hero .content-hero__images .left-plane {
+        left: 200px;
+        width: 280px;
+        height: 200px;
+    }
+
+    .hero .nav-hero .nav-hero__buttons {
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .hero .content-hero {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .hero .nav-hero {
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    .hero .nav-hero .nav-hero__nav-items {
+        margin-left: 0;
+    }
+
+    .hero .content-hero .content-hero__content {
+        width: 100%;
+    }
+
+    .hero .content-hero .content-hero__content .content-hero__tagline,
+    .hero .content-hero .content-hero__content .content-hero__title,
+    .hero .content-hero .content-hero__content .content-hero__desc,
+    .hero .content-hero .content-hero__content .content-hero__buttons {
+        width: 100%;
+    }
+
+    .hero .content-hero .content-hero__images {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .hero .nav-hero {
+        .nav-hero__nav-items {
+            display: none;
+        }
+
+        .nav-hero__buttons {
+            width: 150px;
+        }
+    }
+
+    .hero .content-hero .content-hero__content {
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hero .nav-hero {
+        margin-top: 20px;
+    }
+
+    .hero .content-hero .content-hero__content .content-hero__title {
+        font-size: 60px;
+    }
+}
+

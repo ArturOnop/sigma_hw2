@@ -1,0 +1,174 @@
+.footer {
+    margin: 150px 15vw 80px;
+    position: relative;
+
+    .footer__content {
+        display: flex;
+        justify-content: space-between;
+
+        .footer__lt {
+            width: 207px;
+            font-family: 'Poppins', sans-serif;
+
+            .footer__logo {
+                font-weight: 600;
+                font-size: 44px;
+                color: #181E4B;
+            }
+
+            .footer__tagline {
+                margin-top: 18px;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 124.5%;
+                color: #5E6282;
+            }
+        }
+
+        .footer__col {
+
+            a:hover div {
+                transform: scale(1.05);
+                color: #DF6951;
+            }
+
+            .footer__title {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 700;
+                font-size: 21px;
+                color: #080809;
+            }
+
+            .footer__links {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                color: #5E6282;
+                margin-top: 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .footer__outbound {
+            width: 214px;
+            height: 147px;
+
+            .footer__socials {
+                display: flex;
+                width: 180px;
+                justify-content: space-between;
+
+                .footer__facebook, .footer__twitter, .footer__instagram {
+                    width: 45px;
+                    height: 45px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .footer__facebook, .footer__twitter {
+                    background: #FFFFFF;
+                }
+
+                .footer__instagram {
+                    background: conic-gradient(from 180deg at 50% 50%, #80A4CE 0deg, #F289AA 60deg, #C68BF0 106.09deg, #D164DA 153.75deg, #C963E8 221.25deg, #BFC2E8 258.75deg, #FFC999 288.75deg, #D0D8C9 315deg, #BAD0F1 334.13deg, #CED8CB 358.97deg, rgba(255, 255, 255, 0) 360deg);
+                }
+
+                .footer__facebook img {
+                    width: 6px;
+                    height: 13px;
+                }
+
+                .footer__instagram img {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .footer__twitter img {
+                    width: 16px;
+                    height: 13px;
+                }
+            }
+
+            .footer__app {
+                display: flex;
+                flex-direction: column;
+                margin-top: 25px;
+                gap: 15px;
+
+                .footer__app-title {
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    font-size: 20px;
+                    color: #5E6282;
+                }
+
+                .footer__app-links {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+
+        }
+    }
+
+    .footer__copy {
+        margin-top: 85px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #5E6282;
+        text-align: center;
+    }
+
+    .footer__decor {
+        position: absolute;
+        right: -15vw;
+        top: 200px;
+        width: 150px;
+        height: 150px;
+        background: #D5AEE4;
+        opacity: 0.8;
+        filter: blur(75px);
+        border-radius: 300px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        margin-right: 10vw;
+        margin-left: 10vw;
+
+        .footer__decor {
+            right: -10vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        margin-top: 100px;
+
+        .footer__content {
+            flex-direction: column;
+            gap: 50px;
+            text-align: center;
+            //align-items: center;
+
+            .footer__outbound .footer__socials {
+                width: unset;
+            }
+        }
+
+        .footer__decor {
+            display: none;
+        }
+    }
+}

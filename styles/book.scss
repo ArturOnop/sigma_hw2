@@ -1,0 +1,265 @@
+.book {
+    margin-top: 180px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    display: flex;
+    justify-content: space-between;
+
+    .content-book {
+        width: 50%;
+
+        .title-book {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: #5E6282;
+        }
+
+        .tagline-book {
+            width: 511px;
+            margin-top: 15px;
+            font-family: 'Volkhov', sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+            text-transform: capitalize;
+            color: #14183E;
+        }
+
+        .points-book {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .points-book__point {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                img {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .points-book__content {
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 16px;
+
+                    .points-book__title {
+                        font-weight: 700;
+                        color: #5E6282;
+                    }
+
+                    .points-book__desc {
+                        font-weight: 400;
+                        line-height: 124.5%;
+                        color: #5E6282;
+                        width: 330px;
+                    }
+                }
+            }
+        }
+    }
+
+    .image-book {
+        width: 485px;
+        display: flex;
+        justify-content: end;
+        margin-top: 50px;
+        position: relative;
+
+        .decor-image-book {
+            position: absolute;
+            width: 354px;
+            height: 367px;
+            background: #59B1E6;
+            opacity: 0.4;
+            filter: blur(75px);
+            border-radius: 50%;
+            top: -50px;
+            left: 150px;
+        }
+
+        .content-image-book {
+            width: 485px;
+            height: 400px;
+            position: relative;
+
+            .main-card {
+                display: flex;
+                flex-direction: column;
+                width: 320px;
+                height: 400px;
+                background: #FFFFFF;
+                box-shadow: 0 100px 80px rgba(0, 0, 0, 0.05);
+                border-radius: 26px;
+                padding-left: 25px;
+                padding-right: 25px;
+
+                .main-card__image {
+                    border: 1px solid #000000;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+                    border-radius: 24px;
+                    width: 321px;
+                    height: 161px;
+                    margin-top: 20px;
+                }
+
+                .main-card__title {
+                    margin-top: 25px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    font-size: 18px;
+                    letter-spacing: 0.015em;
+                    color: #080809;
+                }
+
+                .main-card__info {
+                    margin-top: 12px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    letter-spacing: -0.005em;
+                    color: #84829A;
+                }
+
+                .main-card__options {
+                    display: flex;
+                    margin-top: 20px;
+                    gap: 13px;
+
+                    img {
+                        width: 36px;
+                        height: 36px;
+                    }
+                }
+
+                .main-card__footer {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .main-card__footer-people {
+                        display: flex;
+                        gap: 15px;
+                        align-items: center;
+
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+
+                        div {
+                            font-family: 'Poppins', sans-serif;
+                            font-weight: 500;
+                            font-size: 16px;
+                            color: #84829A;
+                        }
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 18px;
+                    }
+                }
+            }
+
+            .second-card {
+                position: absolute;
+                right: 5px;
+                top: 220px;
+                width: 240px;
+                height: 110px;
+                background: #FFFFFF;
+                box-shadow: 0 100px 80px rgba(0, 0, 0, 0.05);
+                border-radius: 18px;
+                display: flex;
+                gap: 10px;
+                padding-top: 20px;
+                padding-left: 20px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .second-card__content {
+                    font-family: 'Poppins', sans-serif;
+
+                    .second-card__title {
+                        font-weight: 500;
+                        font-size: 14px;
+                        color: #84829A;
+                    }
+
+                    .second-card__info {
+                        font-weight: 600;
+                        font-size: 18px;
+                        color: #080809;
+                    }
+
+                    .second-card__percent {
+                        margin-top: 8px;
+                        font-weight: 600;
+                        font-size: 14px;
+                        color: #080809;
+
+                        span {
+                            font-weight: 500;
+                            color: #8A79DF;
+                        }
+                    }
+
+                    .second-card__level {
+                        accent-color: #8A79DF;
+                        height: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .book .content-book .tagline-book {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .book {
+        flex-direction: column;
+        gap: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .book .image-book {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .book {
+        margin-top: 100px;
+
+        .content-book {
+            margin-left: 3vw;
+            margin-right: 3vw;
+            width: fit-content;
+
+            .tagline-book {
+                font-size: 40px;
+                width: 100%;
+            }
+
+            .points-book .points-book__point .points-book__content .points-book__desc {
+                width: 100%;
+            }
+        }
+    }
+}
